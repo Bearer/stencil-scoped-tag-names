@@ -26,8 +26,10 @@ export default (): ts.TransformerFactory<ts.SourceFile> => {
   return (context: ts.TransformationContext) => {
     function visitor(node: ts.Node): ts.VisitResult<ts.Node> {
       switch (node.kind) {
-        case ts.SyntaxKind.JsxElement:
+        case ts.SyntaxKind.JsxElement: {
+          // add custom logic here to replace only component within the scr/components folder
           return ts.visitEachChild(visitJsxElement(<ts.JsxElement>node), visitor, context)
+        }
 
         case ts.SyntaxKind.JsxSelfClosingElement:
           return ts.visitEachChild(visitJsxSelfClosingElement(<ts.JsxSelfClosingElement>node), visitor, context)

@@ -42,7 +42,7 @@ class OtherComponent {
 }
 ```
 
-### How to use `stencil-scoped-tag-names`
+# How to use `stencil-scoped-tag-names`
 
 ```js
 // stencil.config.js
@@ -69,3 +69,21 @@ exports.devServer = {
   watchGlob: '**/**'
 }
 ```
+
+**Building your scoped web component**
+
+```bash
+TAG_NAMES_SCOPE=ion stencil build
+```
+
+# What does this plugin do?
+
+During the TypeScript transpilation phase, this transformer does 2 things:
+
+### 1. Replace the component tag defined within the Stencil `@Component` decorator
+
+During the develoment workflow, you don't need to scope all your components when final users would use the scoped version which prevents cross component conflicts. Best of both worlds
+
+### 2. Replace tag names within your render functions and ease your component writing and reusability
+
+Prevents you to duplicate the scoped all over your components and ease library scope renaming :-)
