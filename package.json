@@ -1,10 +1,13 @@
 {
   "name": "stencil-scoped-tag-names",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/transformer.js",
   "repository": "git@github.com:Bearer/stencil-scoped-tag-names.git",
-  "author": "Tanguy Antoine <antoine.tanguy@apizi.com>",
+  "author": "Tanguy Antoine <antoine@bearer.sh>",
   "license": "MIT",
+  "scripts": {
+    "build": "yarn run tsc -p tsconfig.json"
+  },
   "dependencies": {
     "@types/node": "^10.3.6",
     "typescript": "^2.9.2"
