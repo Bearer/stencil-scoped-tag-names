@@ -1,0 +1,12 @@
+{
+  "name": "stencil-scoped-tag-names",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Bearer/stencil-scoped-tag-names.git",
+  "author": "Tanguy Antoine <antoine.tanguy@apizi.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^10.3.6",
+    "typescript": "^2.9.2"
+  }
+}
